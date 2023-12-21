@@ -10,6 +10,6 @@ router.post("/login", loginUser);
 
 router.post("/getAll", getAllUsers);
 
-router.post("/changePassword", auth, changeUserPass);
+router.post("/changePassword", auth.verify, changeUserPass);
 
 module.exports = router
